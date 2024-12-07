@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <!-- JDBC Connection Properties -->
+    <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/labexam</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">ILOVEmyself143</property>
+
+    <!-- Hibernate Dialect -->
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+    <!-- Additional Hibernate Properties -->
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+    <property name="hibernate.jdbc.time_zone">UTC</property>
+
+    <!-- Entity Mappings -->
+   <mapping class="com.klef.jfsd.exam.InheritanceMapping.Device"/>
+<mapping class="com.klef.jfsd.exam.InheritanceMapping.Smartphone"/>
+<mapping class="com.klef.jfsd.exam.InheritanceMapping.Tablet"/>
+   
+  </session-factory>
+</hibernate-configuration>
